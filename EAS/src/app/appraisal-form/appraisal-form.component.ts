@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./appraisal-form.component.css']
 })
 export class AppraisalFormComponent {
-
+    currentRate:number=0;
 }
