@@ -1,0 +1,14 @@
+a:hover{
+    text-decoration: none;
+}
+
+a{
+    color:rgb(30 ,58,138);
+}
+.btn{
+    background-color: rgb(30 ,58,138);
+}
+.btn:hover{
+    background-color: rgb(30 ,58,138);
+}
+
