@@ -1,57 +1,103 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-2 vh-100  btn-bg">
-
-        </div>
-        <div class="col-10 vh-100 border">
-                <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
-
-
-<!-- 
- <div class="container-fluid" >
+<!-- <div class="container-fluid">
     <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 btn-bg text-light">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2  min-vh-100">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg vh-100">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                 <a href="/" class=" text-light d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
                     <span class="fs-5 d-none d-sm-inline">Menu</span>
                 </a>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center   align-items-sm-start" id="menu">
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center   align-items-sm-start"
+                    id="menu">
                     <li class="nav-item">
-                        <a href="#" class="nav-link align-middle px-0 text-light d-flex align-items-center">
-                            <i class="bi bi-house-add-fill" style="font-size: 2rem;"></i> 
+                        <a class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                            <i class="bi bi-house-add-fill" style="font-size: 2rem;"></i>
                             <span class="ms-1 d-none d-sm-inline">Dashboard</span>
                         </a>
                     </li>
-                    
-                    <li class="nav-item">  
-                        <a href="#" class="nav-link align-middle px-0 text-light d-flex align-items-center">
-                            <i class="bi bi-person-fill" style="font-size: 2rem;"></i> 
+
+                    <li class="nav-item">
+                        <a routerLink="/sidebar/profile"
+                            class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                            <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
                             <span class="ms-1 d-none d-sm-inline">Profile</span>
                         </a>
                     </li>
-                  
+
                     <li class="nav-item">
-                        <a href="add-user/" class="nav-link align-middle px-0 text-light d-flex align-items-center">
-                            <i class="bi bi-people"style="font-size: 2rem;"></i> 
+                        <a routerLink="/sidebar/add-user"
+                            class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                            <i class="bi bi-people" style="font-size: 2rem;"></i>
                             <span class="ms-1 d-none d-sm-inline">Add user</span>
                         </a>
                     </li>
-                
+
                 </ul>
                 <hr>
                 <div class="pb-4">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center text-light">
                         <i class="bi bi-box-arrow-left" style="font-size: 2rem;"></i>
-                        <span class="ms-2">Sign Out</span> 
+                        <span class="ms-2">Sign Out</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-10 vh-100">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 col-sm-3 col-auto px-sm-2 px-0 bg  ">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 ">
+                <a href="/" class="text-light d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline justify-content-center" >Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start " id="menu">
+                    <li class="nav-item ">
+                        <a routerLink="/sidebar/dashboard" class="nav-link align-middle px-0 text-light d-flex align-items-center" style="display: block;">
+                            <i class="bi bi-house-add-fill" style="font-size: 2rem;"></i>
+                            <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a routerLink="/sidebar/profile" class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                            <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
+                            <span class="ms-1 d-none d-sm-inline">Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/sidebar/profile" class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                            <i class="bi bi-people-fill"style="font-size: 2rem;"></i>
+                            <span class="ms-1 d-none d-sm-inline">Add User</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" >
+                        <a routerLink="/sidebar/add-user" class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                            <i class="bi bi-people" style="font-size: 2rem;"></i>
+                            <span class="ms-1 d-none d-sm-inline">Appraisal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" >
+                        <a routerLink="/sidebar/appraisal-form" class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                            <i class="bi bi-pencil-square" style="font-size: 2rem;"></i>
+                            <span class="ms-1 d-none d-sm-inline">Edit Appraisal form</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="pb-4">
+                    <div class="d-flex align-items-center text-light">
+                        <i class="bi bi-box-arrow-left" style="font-size: 2rem;"></i>
+                        <span class="ms-2 d-none d-sm-inline ">Sign Out</span>
                     </div>
                 </div>
             </div>
         </div>
-       
-        
+        <div class="col-lg-10 col-sm-9 vh-100">
+            <router-outlet></router-outlet>
+        </div>
     </div>
-
-</div>  -->
+</div>
