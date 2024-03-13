@@ -1,15 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-
-
-<body style="background-color: rgb(136, 136, 218);">
+<body style="background-color:#e0e2e9;">
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
 
@@ -31,7 +20,7 @@
                     <form class=" px-5 py-5">
                         <div class="col-12 px-0">
                             <label  for="inlineFormInputGroup">Username</label>
-                            <div class="input-group mb-2">
+                            <div class="input-group mb-2 mt-3">
                               <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <i class="bi bi-people-fill"></i>
@@ -40,12 +29,12 @@
                               <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
                             </div>
                           </div>
-                          <div class="col-12 px-0">
+                          <div class="col-12 px-0 mt-3">
                             <label  for="inlineFormInputGroup">Password</label>
-                            <div class="input-group mb-2">
+                            <div class="input-group mb-2 mt-3">
                               <div class="input-group-prepend">
                                 <div class="input-group-text">
-                                   @
+                                    <i class="bi bi-lock-fill"></i>
                                 </div>
                               </div>
                               <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="Password">
@@ -54,13 +43,13 @@
                        
                         <div class="row mt-5">
                             <div class="col-12 text-center">
-                                <button  routerLink="/sidebar" type="submit" class="btn w-100 text-light fw-bold">Sign In</button>
+                                <button type="submit" class="btn w-50 text-light fw-bold rounded-4" routerLink="/sidebar/dashboard">Sign In</button>
                             </div>
                         </div>
 
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <a href="">Forgot Password?
+                                <a href="" style="text-decoration: none;">Forgot Password?
                                 </a>
                             </div>
             
@@ -75,5 +64,4 @@
         
     </div>
 </div>
-</body>
-</html>
+>

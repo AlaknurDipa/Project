@@ -11,10 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppraisalFormComponent } from './appraisal-form/appraisal-form.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-// import {MatButtonModule} from '@angular/material/button';
-
+import { UserhelpComponent } from './userhelp/userhelp.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +24,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     UsersComponent,
     DashboardComponent,
-    AppraisalFormComponent
-
+    AppraisalFormComponent,
+    UserhelpComponent
   ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-   
+    AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,6 +8,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppraisalFormComponent } from './appraisal-form/appraisal-form.component';
+import { UsersComponent } from './users/users.component';
+import { UserhelpComponent } from './userhelp/userhelp.component';
 
 const routes: Routes = [
   {
@@ -51,7 +53,6 @@ const routes: Routes = [
       }
     ]
   }
-
 ];
 
 @NgModule({

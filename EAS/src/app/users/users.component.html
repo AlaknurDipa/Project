@@ -1,58 +1,55 @@
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500;6..12,800&display=swap" rel="stylesheet">
-</head>
-<body class="row">
-    <div class="col-2" style="background-color: blue;">
-      
-    </div>
-    
-    <div class="col-10 p-5">
+<div class="container">
       <div class="row container-fluid">
-        <div class="fw-bold fs-2 mt-5 col-1 ">Users</div>
+        <div class="fw-bold fs-1 mt-5 col-1 ">Users</div>
         <div class=" col-11 text-end mt-5 form-group">
-            <button class="btn rounded-5 " style="background-color: rgb(30,58,138);">
-                <a class="text-white font-weight-bold" style="text-decoration: none;"  role="button">Add a new user</a></button>
+            <button class="btn rounded-4 " style="background-color: rgb(30,58,138);">
+                <a class="text-white fw-bold p-3  " style="text-decoration: none;"  role="button" routerLink="/sidebar/add-user">Add a new user</a></button>
         </div> 
       </div>
         
-      <div class="row container mt-4">
+      <!-- <div class="row container mt-4">
           <div class="col-3">
               <input type="text" class="form-control rounded border-primary" placeholder="Search by username">
           </div>
+      </div> -->
+
+
+      <div class="shadow  mt-5 me-lg-1 me-xs-0">
+
+        <table class="table fs-5">
+            <thead>
+              <tr class="text-center ">
+                <th>Name</th>
+                <th>Username</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody >
+                <tr class="text-center">
+                  <td >Hello</td>
+                  <td >hiii</td>
+                  <td><button class="btn bg-success text-light me-2 px-2" ><a routerLink="/sidebar/add-user"><i class="bi bi-pencil-square text-light" ></i></a></button>
+                    <button class="btn text-light bg-danger px-2"><i class="bi bi-trash-fill"></i></button>
+                </tr>
+
+                <tr class="text-center">
+                  <td >Hello</td>
+                  <td >hiii</td>
+                  <td><button class="btn bg-success text-light me-2 px-2" ><a routerLink="/sidebar/add-user"><i class="bi bi-pencil-square text-light" ></i></a></button>
+                    <button class="btn text-light bg-danger px-2"><i class="bi bi-trash-fill"></i></button>
+                </tr>
+            
+            </tbody>
+          </table>
       </div>
-
       
-      <table class="table  mt-5">
-        <thead>
-          <tr class="text-center">
-            <th >Name</th>
-            <th >Username</th>
-            <th >Action</th>
-          </tr>
-        </thead>
-        <tbody>
-
-            <tr class="text-center">
-              <td >Hello</td>
-              <td>hiii</td>
-              <td><button style="border:none; background-color: white;" ><i class="bi bi-pen-fill text-primary"></i></button></td>
-            </tr>
-        
-        </tbody>
-      </table>
+      
 
     </div>
 
-</body>
-</html>
+
+
 
 
 
