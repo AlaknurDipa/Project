@@ -15,42 +15,43 @@ const routes: Routes = [
   {
     path:"",
     component:IndexComponent
-  },{
-    path:"sidebar",
-    component:SidebarComponent,
-    children:[
-      {
-        path : "",
-        component:DashboardComponent
-      },
-        {
-          path:"add-user",
-          component:AddUserComponent
-        },
-          {
-            path: 'profile',
-            component: ProfileComponent
-          },
-          {
-            path:"appraisal-form",
-            component:AppraisalFormComponent
-          },{
-            path: "dashboard",
-            component: DashboardComponent
-          },{
-            path: "users",
-            component: UsersComponent
-          },{
-            path: "userhelp",
-            component: UserhelpComponent
-          }
-        
-    
-    ]
-
-  },{
+  },
+  {
+    path:"add-user",
+    component:AddUserComponent
+  },
+  {
     path:"sign-in",
     component:LoginComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
+  }, 
+  {
+    path: "sidebar",
+    component: SidebarComponent,
+    children: [
+      {
+        path: "",
+        component: DashboardComponent
+      },{
+        path:"appraisal-form/:Id",
+        component:AppraisalFormComponent
+      },
+      {
+      path: 'profile',
+      component: ProfileComponent
+      },
+      {
+      path: "add-user",
+      component: AddUserComponent
+      },
+      {
+      path: "dashboard",
+      component: DashboardComponent
+      }
+    ]
   }
 ];
 

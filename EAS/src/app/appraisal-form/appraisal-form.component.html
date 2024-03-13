@@ -1,26 +1,63 @@
 <div class="container mt-4">
     <div class="d-flex  justify-content-end">
+        
         <button class="btn bg text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Question</button>
 
     </div>
-    <div>
-        <table class="table">
+    <div class="mt-4">
+        <table class="table table-hover">
             <thead>
-              <tr>
+              <tr >
                 <th scope="col">Sr.No</th>
                 <th scope="col">Question</th>
+                <th *ngIf="Id==1">Rating</th>
+                <th *ngIf="Id==2">Action</th>
+                
                
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td style="width: 20%;">1</td>
-                <td style="width: 80%;" >@mdo</td>
+                <td style="width: 60%;" >@mdo</td>
+                <td  *ngIf="Id==1" style="width: 20%; font-size: xx-large; ">
+                    <ngb-rating [max]="5" (rate)="1"  id="Q1" class=" text-warning fw-5 "></ngb-rating>
+                </td>
+                <td *ngIf="Id==2">
+                  <tr>
+                    <button class="btn bg-success  me-2 text-light" style="font-size: larger;"><i class="bi bi-pencil-square" style="font-size: 20px"></i></button>
+                    <button class="btn bg text-light bg-danger"><i class="bi bi-trash-fill" style="font-size: 20px"></i></button>
+                  </tr>
+                  
+                </td>
+                
               </tr>
-              
+              <tr>
+                <td style="width: 20%;">1</td>
+                <td style="width: 60%;">@mdo</td>
+                <td  *ngIf="Id==1" style="width: 20%; font-size: xx-large; ">
+                    <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                </td>
+                <td *ngIf="Id==2">
+                  <tr>
+                    <button class="btn bg-success  me-2 text-light" style="font-size: larger;"><i class="bi bi-pencil-square" style="font-size: 20px"></i></button>
+                    <button class="btn bg text-light bg-danger"><i class="bi bi-trash-fill" style="font-size: 20px"></i></button>
+                  </tr>
+                  
+                </td>
+                
+              </tr>
              
             </tbody>
           </table>
+          <div>
+            <div class="d-flex  justify-content-end">
+              <button class="btn bg text-light">
+                Save
+              </button>
+            </div>
+            
+          </div>
     </div>
 </div>
 
