@@ -1,0 +1,54 @@
+
+<div class="container">
+    <!-- Title Row -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="fw-bold fs-1 ">Rate Appraisal</div>
+        </div>
+    </div>
+    <!-- Table Row -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="shadow">
+                <table class="table table-hover text-center p-5">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Question</th>
+                            <th>Rating</th>
+                            <th>Comment</th>
+                            <th>Your Rating</th>
+                            <th>Your Say</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="fs-4">
+                            <td class="align-middle" style="font-size: 15px;">1</td>
+                            <td class="align-middle" style="font-size: 15px;">Quality of Work</td>
+                            <td class="align-middle">
+                                <ngb-rating [max]="5" (rate)="1"  id="Q1" class="text-warning fs-md-4 fs-xs-5"></ngb-rating>
+                            </td>
+                            <td class="align-middle" style="font-size: 15px;">
+                                Good
+                            </td>
+                            <td class="align-middle">
+                                <ngb-rating [max]="5" (rate)="1"  id="Q1" class="text-warning fs-md-4 fs-xs-5"></ngb-rating>
+                            </td>
+                            <td class="align-middle d-flex justify-content-center">
+                                <input class="form-control text-center" type="text" placeholder="Your Comment">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Button Row -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="d-flex justify-content-end">
+                <button class="btn text-light fw-bold" style="background-color: rgb(30, 58, 138);">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

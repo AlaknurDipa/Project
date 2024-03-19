@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
@@ -12,6 +13,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppraisalFormComponent } from './appraisal-form/appraisal-form.component';
 import { UserhelpComponent } from './userhelp/userhelp.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EmployeeAprraisalsComponent } from './employee-aprraisals/employee-aprraisals.component';
+import { ReviewAppraisalComponent } from './review-appraisal/review-appraisal.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {MatInputModule} from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,12 +32,18 @@ import { UserhelpComponent } from './userhelp/userhelp.component';
     UsersComponent,
     DashboardComponent,
     AppraisalFormComponent,
-    UserhelpComponent
+    UserhelpComponent,
+    EmployeeAprraisalsComponent,
+    ReviewAppraisalComponent
   ],
 
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    MatInputModule,
+    BrowserAnimationsModule,
     
   ],
   providers: [],

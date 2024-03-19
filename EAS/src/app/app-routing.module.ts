@@ -10,6 +10,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppraisalFormComponent } from './appraisal-form/appraisal-form.component';
 import { UsersComponent } from './users/users.component';
 import { UserhelpComponent } from './userhelp/userhelp.component';
+import { EmployeeAprraisalsComponent } from './employee-aprraisals/employee-aprraisals.component';
+import { ReviewAppraisalComponent } from './review-appraisal/review-appraisal.component';
 
 const routes: Routes = [
   {
@@ -50,7 +52,24 @@ const routes: Routes = [
       {
       path: "dashboard",
       component: DashboardComponent
+      },
+      {
+      path: 'users',
+      component: UsersComponent
+      },
+      {
+      path: 'userhelp',
+      component: UserhelpComponent
+      },
+      {
+        path:'employee-appraisals',
+        component:EmployeeAprraisalsComponent
+      },
+      {
+        path:'employee-appraisals/1',
+        component:ReviewAppraisalComponent
       }
+
     ]
   }
 ];
