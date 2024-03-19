@@ -1,27 +1,35 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2  col-auto px-sm-2 px-0 bg  ">
+
+
+<div class="container-fluid" style="height: 100vh;">
+   
+    <div class="row ">
+        
+        <div class="col-md-2  col-1 px-sm-2 px-0 bg  ">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 ">
                 <a href="/" class="text-light d-flex align-items-center px-3 py-2 mb-md-0 me-md-auto text-decoration-none">
                     <span class="fs-5 d-none d-md-inline justify-content-center" >Menu</span>
                 </a>
+
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start " id="menu">
+                    <!-- <li>
+                        <img src="https://centelonsolutions.com/wp-content/uploads/MicrosoftTeams-image-175.png" height="100px" width="100px">
+                    </li> -->
                     <li class="nav-item ">
-                        <a routerLink="/sidebar/dashboard" class="nav-link align-middle px-0 text-light d-flex align-items-center" style="display: block;">
-                            <i class="bi bi-house-add-fill pe-2" style="font-size: 2rem;"></i>
+                        <a routerLink="/sidebar/{{userId}}/dashboard" class="nav-link align-middle px-0 text-light d-flex align-items-center" style="display: block;">
+                            <i class="bi bi-house-add-fill" style="font-size: 2rem;"></i>
                             <span class="ms-1 d-none d-md-inline">Dashboard</span>
                         </a>
                     </li>
  
                     <li class="nav-item">
-                        <a routerLink="/sidebar/profile" class="nav-link align-middle px-0 text-light d-flex align-items-center">
-                            <i class="bi bi-person-fill pe-2" style="font-size: 2rem;"></i>
+                        <a routerLink="/sidebar/{{userId}}/profile" class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                            <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
                             <span class="ms-1 d-none d-md-inline">Profile</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a routerLink="/sidebar/users" class="nav-link align-middle px-0 text-light d-flex align-items-center">
-                            <i class="bi bi-people-fill pe-2"style="font-size: 2rem;"></i>
+                        <a routerLink="/sidebar/{{userId}}/add-user" class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                            <i class="bi bi-people-fill"style="font-size: 2rem;"></i>
                             <span class="ms-1 d-none d-md-inline">Add User</span>
                         </a>
                     </li>

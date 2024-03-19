@@ -1,37 +1,34 @@
 
-<div class="container-fluid px-5" >
+<div class="container-fluid px-5 py-3" >
+    <h2>Self-Appraisal</h2>
     <mat-tab-group >
-        <mat-tab label="Project Score">
+        <mat-tab  label="Project Score" >
+            <div class="d-flex justify-content-end pt-3">
+                <button class="btn btn-bg text-white " data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Project</button>
+                
+            </div>
             
-            <table class="table table-hover">
+            <table class="table mt-5">
+                
                 <thead>
-                    <tr>
+                    <tr class="" style="font-size: 17px;">
+                        
                       <th>Project</th>
-                      <th >Start Date</th>
-                      <th >End Date</th>
-                      <th >Self Rating</th>
+                      <th>Start Date</th>
+                      <th>End Date</th>
+                      <th>Task List</th>
+                      <th>Self Rating</th>
                       <th>Appraiser Rating</th> 
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
+                   
+                        
+                    
+                   
                     
                   </tbody>
-                  <tfoot>
-                    <tr>
-                      <td colspan="3">Footer content</td>
-                    </tr>
-                  </tfoot>
+                  
               </table>
         </mat-tab>
 
@@ -279,3 +276,88 @@
       
 </div>
   
+
+
+
+
+  <!-- Modal -->
+  <div class="modal  fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Add Project</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+            <form>
+                <div class="row">
+                  <div class="col">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Project</mat-label>
+                        <input matInput>
+                      </mat-form-field>
+                    <!-- <label for="project" class="form-label">Project Name</label>
+                    <input type="text" id="project" class="form-control"  name="project"> -->
+                  </div>
+                  
+                </div>
+                <div class="row mt-3">
+                    <div class="col ">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Choose start date</mat-label>
+                            <input matInput [matDatepicker]="sDate" placeholder="MM/DD/YYYY">
+                            
+                            <mat-datepicker-toggle matIconSuffix [for]="sDate"></mat-datepicker-toggle>
+                            <mat-datepicker #sDate></mat-datepicker>
+                        </mat-form-field>
+                        
+                    </div>
+                    <div class="col ">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Choose end date</mat-label>
+                            <input matInput [matDatepicker]="eDate" placeholder="MM/DD/YYYY">
+                            <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                            <mat-datepicker-toggle matIconSuffix [for]="eDate"></mat-datepicker-toggle>
+                            <mat-datepicker #eDate></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Task List</mat-label>
+                            <textarea matInput></textarea>
+                          </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="row mt-3">
+                        <div class="col">
+                        
+                            <label for="rate" class="form-label me-5">Self Rating</label>
+                       </div> 
+                       
+                        <div class="col">
+                            <ngb-rating id="rate" [max]="5" (rate)="1"  class=" text-warning fw-5 " style="font-size: 30px;"></ngb-rating>
+                        </div>
+                    
+                </div>  
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="rate" class="form-label ">Appraiser Rating</label>
+                       
+                    </div>
+                    <div class="col">
+                        <ngb-rating id="rate" [max]="5" (rate)="1"  class=" text-warning fw-5 " style="font-size: 30px;"></ngb-rating>
+                    </div>
+                </div>  
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>

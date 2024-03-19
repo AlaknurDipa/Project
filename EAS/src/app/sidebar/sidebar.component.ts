@@ -7,13 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  u_id:number=1;
-  Id:number=0;
+  userId:number=0;
   constructor(private activeRoute:ActivatedRoute){
 
   }
   ngOnInit(){
-    this.Id = JSON.parse( this.activeRoute.snapshot.params['ID'])
+    this.userId = JSON.parse( this.activeRoute.snapshot.params['Id'])
     
   }
 
