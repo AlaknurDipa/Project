@@ -1,12 +1,4 @@
-/* my-form.component.css */
-.custom-fieldset {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .custom-fieldset legend {
-    font-weight: bold;
-  }
-  
+
+.color{
+  color: rgb(30, 53, 138);
+};

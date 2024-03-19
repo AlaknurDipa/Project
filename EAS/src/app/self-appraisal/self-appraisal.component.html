@@ -1,0 +1,281 @@
+
+<div class="container-fluid px-5" >
+    <mat-tab-group >
+        <mat-tab label="Project Score">
+            
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                      <th>Project</th>
+                      <th >Start Date</th>
+                      <th >End Date</th>
+                      <th >Self Rating</th>
+                      <th>Appraiser Rating</th> 
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="3">Footer content</td>
+                    </tr>
+                  </tfoot>
+              </table>
+        </mat-tab>
+
+
+
+        <mat-tab label="Competency">
+                <table class="table table-hover shadow-lg text-center mt-5">
+                    <thead>
+                      <tr>
+                        <th >Sr.No</th>
+                        <th >Category</th>
+                        <th >Self Rating</th>
+                        <th >Self Comment</th>
+                        <th>Appraiser Rating</th>
+                        <th>Appraiser Comment</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="p-0">
+                        <td >1</td>
+                        <td >Communication</td>
+                        <td   style=" font-size: xx-large; ">
+                            <ngb-rating [max]="5" (rate)="1"  id="Q1" class=" text-warning fw-5 "></ngb-rating>
+                        </td>
+                        <td   class="align-middle d-flex justify-content-center">
+                          <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Your Comment </mat-label>
+                            <input matInput>
+                          </mat-form-field>
+                        </td>
+                        <td  style=" font-size: xx-large; ">
+                          <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                        </td>
+                        <td  class="align-middle d-flex justify-content-center">
+                          <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Appraiser Comment</mat-label>
+                            <input matInput>
+                          </mat-form-field>
+                        </td> 
+                        
+                      </tr>
+                      <tr>
+                        <td >2</td>
+                        <td >People Management</td>
+                        <td  style=" font-size: xx-large; ">
+                            <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                        </td>
+                        <td  class="align-middle d-flex justify-content-center">
+                          <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Your Comment </mat-label>
+                            <input matInput>
+                          </mat-form-field>
+                        </td> 
+                        <td  style=" font-size: xx-large; ">
+                          <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                        </td>
+                        <td  class="align-middle d-flex justify-content-center">
+                          <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Appraiser Comment</mat-label>
+                            <input matInput >
+                          </mat-form-field>
+                        </td>  
+                      </tr>
+
+
+                      <tr>
+                        <td >3</td>
+                        <td >Client Relationship Management</td>
+                        <td  style=" font-size: xx-large; ">
+                            <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                        </td>
+                        <td  class="align-middle d-flex justify-content-center">
+                          <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Your Comment </mat-label>
+                            <input matInput >
+                          </mat-form-field>
+                        </td> 
+                        <td  style=" font-size: xx-large; ">
+                          <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                        </td>
+                        <td  class="align-middle d-flex justify-content-center">
+                          <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Appraiser Comment </mat-label>
+                            <input matInput >
+                          </mat-form-field>
+                        </td>  
+                      </tr>
+
+
+                      <tr>
+                        <td >4</td>
+                        <td >Job Knowledge</td>
+                        <td  style=" font-size: xx-large; ">
+                            <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                        </td>
+                        <td  class="align-middle d-flex justify-content-center">
+                          <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Your Comment </mat-label>
+                            <input matInput >
+                          </mat-form-field>
+                        </td> 
+                        <td  style=" font-size: xx-large; ">
+                          <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                        </td>
+                        <td  class="align-middle d-flex justify-content-center">
+                          <mat-form-field class="w-100" appearance="outline">
+                            <mat-label>Appraiser Comment </mat-label>
+                            <input matInput >
+                          </mat-form-field>
+                        </td>  
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+
+                  <div>
+                    <div class="d-flex  justify-content-end">
+                      <button class="btn btn-bg text-light">
+                        Save
+                      </button>
+                    </div> 
+                  </div>
+        </mat-tab>
+        <mat-tab label="Value Alignment">
+          <table class="table table-hover shadow-lg text-center mt-5">
+            <thead>
+              <tr >
+                <th >Sr.No</th>
+                <th >Category</th>
+                <th >Self Rating</th>
+                <th >Self Comment</th>
+                <th>Appraiser Rating</th>
+                <th>Appraiser Comment</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td >1</td>
+                <td >Trust</td>
+                <td   style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" (rate)="1"  id="Q1" class=" text-warning fw-5 "></ngb-rating>
+                </td>
+                <td   class="align-middle d-flex justify-content-center">
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Your Comment </mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </td>
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                </td>
+                <td  class="align-middle d-flex justify-content-center">
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Appraiser Comment </mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </td> 
+                
+              </tr>
+              <tr>
+                <td >2</td>
+                <td >Entrepreneurship</td>
+                <td  style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                </td>
+                <td  class="align-middle d-flex justify-content-center">
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Your Comment </mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </td> 
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                </td>
+                <td  class="align-middle d-flex justify-content-center">
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Appraiser Comment </mat-label>
+                    <input matInput >
+                  </mat-form-field>
+                </td>  
+              </tr>
+
+
+              <tr>
+                <td >3</td>
+                <td >Attention To Detail</td>
+                <td  style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                </td>
+                <td  class="align-middle d-flex justify-content-center">
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Your Comment </mat-label>
+                    <input matInput >
+                  </mat-form-field>
+                </td> 
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                </td>
+                <td  class="align-middle d-flex justify-content-center">
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Appraiser Comment </mat-label>
+                    <input matInput >
+                  </mat-form-field>
+                </td>  
+              </tr>
+
+
+              <tr>
+                <td >4</td>
+                <td >Mateship</td>
+                <td  style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                </td>
+                <td  class="align-middle d-flex justify-content-center">
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Your Comment </mat-label>
+                    <input matInput >
+                  </mat-form-field>
+                </td> 
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" (rate)="2"  class=" text-warning fw-5 "></ngb-rating>
+                </td>
+                <td  class="align-middle d-flex justify-content-center">
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Appraiser Comment </mat-label>
+                    <input matInput >
+                  </mat-form-field>
+                </td>  
+              </tr>
+             
+            </tbody>
+          </table>
+
+          <div>
+            <div class="d-flex  justify-content-end">
+              <button class="btn btn-bg text-light">
+                Save
+              </button>
+            </div> 
+          </div>
+
+        </mat-tab>
+      </mat-tab-group>
+      
+</div>
+  

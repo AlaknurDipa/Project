@@ -60,13 +60,15 @@
 
 
                <div class="row pt-lg-4 pt-sm-4">
-                <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                  <mat-label class="fs-5">Department</mat-label>
-                  <input matInput>
+                  <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
+                    <mat-label class="fs-5">Department</mat-label>
+                    <mat-select>
+                    <mat-option *ngFor="let dept of departments">{{dept.dept_name}}</mat-option>
+                  </mat-select>
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                  <mat-label class="fs-5">Location</mat-label>
+                  <mat-label class="fs-5">Manager name</mat-label>
                   <input matInput>
                 </mat-form-field>
              </div>

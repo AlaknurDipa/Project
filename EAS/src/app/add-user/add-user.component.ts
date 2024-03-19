@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-add-user',
@@ -7,7 +9,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent {
-
+ 
+  mycontrol = new FormControl();
 
   constructor(private http:HttpClient){};
   departments:any;

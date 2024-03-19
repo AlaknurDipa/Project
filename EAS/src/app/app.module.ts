@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { NgForm } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,12 +14,26 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppraisalFormComponent } from './appraisal-form/appraisal-form.component';
 import { UserhelpComponent } from './userhelp/userhelp.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { EmployeeAprraisalsComponent } from './employee-aprraisals/employee-aprraisals.component';
 import { ReviewAppraisalComponent } from './review-appraisal/review-appraisal.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormControl } from '@angular/forms';
+
+
+
 import {MatInputModule} from '@angular/material/input';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { ToastrModule } from 'ngx-toastr';
+import { SelfAppraisalComponent } from './self-appraisal/self-appraisal.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -34,7 +49,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppraisalFormComponent,
     UserhelpComponent,
     EmployeeAprraisalsComponent,
-    ReviewAppraisalComponent
+    ReviewAppraisalComponent,
+    SelfAppraisalComponent
   ],
 
   imports: [
@@ -43,7 +59,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule,
     HttpClientModule,
     MatInputModule,
+    FormsModule,
     BrowserAnimationsModule,
+    // ToastrModule.forRoot(),
+    MatTabsModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatAutocompleteModule
+    
     
   ],
   providers: [],

@@ -12,6 +12,7 @@ import { UsersComponent } from './users/users.component';
 import { UserhelpComponent } from './userhelp/userhelp.component';
 import { EmployeeAprraisalsComponent } from './employee-aprraisals/employee-aprraisals.component';
 import { ReviewAppraisalComponent } from './review-appraisal/review-appraisal.component';
+import { SelfAppraisalComponent } from './self-appraisal/self-appraisal.component';
 
 const routes: Routes = [
   {
@@ -35,7 +36,7 @@ const routes: Routes = [
     component: SidebarComponent,
     children: [
       {
-        path: "",
+        path: "/:id",
         component: DashboardComponent
       },{
         path:"appraisal-form/:Id",
@@ -50,8 +51,17 @@ const routes: Routes = [
       component: AddUserComponent
       },
       {
+      path: "edit-user/:id",
+      component: AddUserComponent
+      }
+      
+      ,
+      {
       path: "dashboard",
       component: DashboardComponent
+      },{
+        path:'self-appraisal',
+        component:SelfAppraisalComponent
       },
       {
       path: 'users',

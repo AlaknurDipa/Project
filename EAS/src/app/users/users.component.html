@@ -19,20 +19,12 @@
               </tr>
             </thead>
             <tbody >
-                <tr class="text-center">
-                  <td >Hello</td>
-                  <td >hiii</td>
-                  <td><button class="btn bg-success text-light me-2 px-2" ><a routerLink="/sidebar/add-user"><i class="bi bi-pencil-square text-light" ></i></a></button>
+                <tr class="text-center" *ngFor="let user of users">
+                  <td >{{user.first_name}} {{user.last_name}}</td>
+                  <td >{{user.user_name}}</td>
+                  <td><button class="btn bg-success text-light me-2 px-2" ><a routerLink="/sidebar/edit-user/"+{{user.user_id}}><i class="bi bi-pencil-square text-light" ></i></a></button>
                     <button class="btn text-light bg-danger px-2"><i class="bi bi-trash-fill"></i></button>
                 </tr>
-
-                <tr class="text-center">
-                  <td >Hello</td>
-                  <td >hiii</td>
-                  <td><button class="btn bg-success text-light me-2 px-2" ><a routerLink="/sidebar/add-user"><i class="bi bi-pencil-square text-light" ></i></a></button>
-                    <button class="btn text-light bg-danger px-2"><i class="bi bi-trash-fill"></i></button>
-                </tr>
-            
             </tbody>
           </table>
       </div>
