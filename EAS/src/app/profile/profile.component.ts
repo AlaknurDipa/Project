@@ -7,35 +7,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-    @ViewChild('addFamilyMemberRow') row!:ElementRef;
-    deleteRow(drow:any){
-      debugger
-      drow.remove();
-    }
-    addRow(){
+    
+  userID:number=0;
+  constructor(private activeRoute:ActivatedRoute){
 
-      const originalRowElement = this.row.nativeElement;
-      console.log(originalRowElement)
-      if(originalRowElement){
-        const clonedRow = originalRowElement.cloneNode(true);
-      const inputElements = clonedRow.querySelectorAll('select,input');
-      inputElements.forEach((element: any) => {
-        if (element.tagName.toLowerCase() === 'input' ) {
-          element.value = '';
-        } else if (element.tagName.toLowerCase() === 'select') {
-          element.selectedIndex = 0;
-        }
-      });
+  }
+  ngOnInit(){
+    this.userID = JSON.parse( this.activeRoute.snapshot.params['Id'])
+    
+  }
 
-      const trash = clonedRow.querySelector('.trash');
-      if (trash) {
-        trash.addEventListener('click', () => this.deleteRow(clonedRow));
-      }
- 
-      originalRowElement.parentNode.insertBefore(clonedRow, originalRowElement.nextSibling);
-      }
-      
- 
-    }
 
 }

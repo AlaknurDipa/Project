@@ -20,7 +20,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { ToastrModule } from 'ngx-toastr';
 import { SelfAppraisalComponent } from './self-appraisal/self-appraisal.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatNativeDateModule } from '@angular/material/core';
 
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,12 @@ import {MatTabsModule} from '@angular/material/tabs';
     BrowserAnimationsModule,
     // ToastrModule.forRoot(),
     MatTabsModule,
-    NgbModule
+    NgbModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    
     
   ],
   providers: [],

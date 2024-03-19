@@ -30,7 +30,7 @@ const routes: Routes = [
     component: ProfileComponent
   }, 
   {
-    path: "sidebar",
+    path: "sidebar/:Id",
     component: SidebarComponent,
     children: [
       {
