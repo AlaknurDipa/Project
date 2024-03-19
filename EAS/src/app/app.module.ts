@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgForm } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,14 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppraisalFormComponent } from './appraisal-form/appraisal-form.component';
 import { UserhelpComponent } from './userhelp/userhelp.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { ToastrModule } from 'ngx-toastr';
+import { SelfAppraisalComponent } from './self-appraisal/self-appraisal.component';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 @NgModule({
   declarations: [
@@ -25,12 +34,19 @@ import { UserhelpComponent } from './userhelp/userhelp.component';
     UsersComponent,
     DashboardComponent,
     AppraisalFormComponent,
-    UserhelpComponent
+    UserhelpComponent,
+    SelfAppraisalComponent
   ],
 
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    // ToastrModule.forRoot(),
+    MatTabsModule,
+    NgbModule
     
   ],
   providers: [],

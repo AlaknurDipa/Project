@@ -14,7 +14,7 @@ export class SidebarComponent {
   }
   ngOnInit(){
     this.Id = JSON.parse( this.activeRoute.snapshot.params['ID'])
-    console.log(this.Id)
+    
   }
 
   

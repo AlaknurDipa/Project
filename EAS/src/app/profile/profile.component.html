@@ -1,32 +1,74 @@
 
 
-<div class="container mt-3 p-3 bg-white rounded">
-  <h4>My Profile</h4>
-  <div class="row p-3 border rounded mt-4 ">
+<div class="container mt-5 p-5  rounded">
+  <h3 class="ms-3">My Profile</h3>
+  <div class="row border d-flex p-3  rounded mt-4 ">
+    <div class="col-1">
+      <img src="../../assets/profile-user (1).png" class="" height="70px" width="70px">
+    </div>
+    <div class="col-10 ms-5">
+      <div class="row ">
+        <div class="col-12 ">
+          <h5 class="fw-cold">Dipa Krushna Alaknur</h5>
+        </div>
+        <div class="col-12 ">
+          <div class="row ">
+            <div class="col-9 ">
+              <h6 class="text-secondary">Intern</h6>
+              <h6 class="text-secondary">Pune</h6>
+            </div>
+            <div class="col-3  ">
+              <h6 class="text-secondary">Employee ID:1700</h6>
+              <h6 class="text-secondary">Manager Name : Vikas Jain</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="row p-3 border rounded mt-4 ">
     <div class="col d-flex align-items-center">
       <img src="../../assets/profile-user (1).png" class="" height="70px" width="70px">
       <div class="row">
         <div class="col-12 ms-3">
           <h5 class="fw-cold">Dipa Krushna Alaknur</h5>
         </div>
-        <div class="row ms-2">
-          <div class=" col-6">
-
-            <h6 class="text-secondary">Intern</h6>
-            <h6 class="text-secondary">Pune</h6>
-
-          </div>
-          <div class=" col-6">
-
-            <h6 class="text-secondary">Employee ID:1700</h6>
-            <h6 class="text-secondary">Manager Name : Vikas Jain</h6>
-
+        <div class="col-12">
+          <div class="row ms-2">
+            <div class="col-6">
+              <h6 class="text-secondary">Intern</h6>
+              <h6 class="text-secondary">Pune</h6>
+            </div>
+            <div class="col-6 ">
+              <h6 class="text-secondary">Employee ID:1700</h6>
+              <h6 class="text-secondary">Manager Name : Vikas Jain</h6>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
+
+  
 
 
 
@@ -128,66 +170,7 @@
     </div>
   </div>
 
-  <div class="row bg-white border rounded mt-3 p-3">
-    <h5>Family Information</h5>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th >Relation</th>
-          <th >Name</th>
-          <th >Gender</th>
-          <th >DOB</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr #addFamilyMemberRow>
-          <td style="width: 20%;">
-              <select class="form-select  "   id="relation" name="relation">
-                <option selected></option>
-                <option value="mother">Mother</option>
-                <option value="father">Father</option>
-                <option value="sister">Sister</option>
-                <option value="brother">Brother</option>
-                <option value="son">Son</option>
-                <option value="spouse">Spouse</option>
-                <option value="daugheer">Daughter</option>
-              </select>
-            
-          </td>
-          <td style="width: 35%;">
-            <input type="text" class="form-control" placeholder="Name">
-          </td>
-          <td style="width: 20%;">
-            <select class="form-select "   id="gender" name="gender">
-              <option selected></option>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
-              <option value="other">Other</option>
-              
-            </select>
-          </td>
-          <td style="width: 20%;">
-            <input type="date" name="dob" class="form-control">
-            
-          </td>
-          <td style="width: 5%; " class="text-center" >
-           <button class="trash btn" (click)="deleteRow(addFamilyMemberRow)">
-            <i class="bi bi-trash-fill " style="font-size: 20px"></i>
-           </button>
-          </td>
-        </tr>
-
-        
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="4" class="color" (click)="addRow()" style="cursor: pointer;">Add a line</td>
-        </tr>
-      </tfoot>
-    </table>
-    
-  </div>
+  
 
   <div class="row bg-white border rounded mt-3 p-3">
     <h5>Account Information</h5>
