@@ -25,15 +25,13 @@ export class LoginComponent {
   
     
     this.http.post("http://localhost:8080/user/login",Data).subscribe((response:any)=>{
-       console.log(response)
-       debugger
+       
        if(response!==null){
-        // this.toastr.success('Successful', 'Login',{ timeOut: 1000 });
         this.router.navigate(['/sidebar/'+response.user_id]);
        }else {
         console.log("Working");
        
-        // this.toastr.error('Hello world!', 'Error');
+       
        }
     });
   }

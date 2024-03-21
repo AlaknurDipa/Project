@@ -15,20 +15,20 @@
                         <img src="https://centelonsolutions.com/wp-content/uploads/MicrosoftTeams-image-175.png" height="100px" width="100px">
                     </li> -->
                     <li class="nav-item ">
-                        <a routerLink="/sidebar/{{userId}}/dashboard" class="nav-link align-middle px-0 text-light d-flex align-items-center" style="display: block;">
+                        <a routerLink="/sidebar/{{userId}}" class="nav-link align-middle px-0 text-light d-flex align-items-center" style="display: block;">
                             <i class="bi bi-house-add-fill" style="font-size: 2rem;"></i>
                             <span class="ms-1 d-none d-md-inline">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a routerLink="/sidebar/{{userId}}/profile" class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                        <a routerLink="/sidebar/{{userId}}/profile/{{userId}}"  class="nav-link align-middle px-0 text-light d-flex align-items-center">
                             <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
                             <span class="ms-1 d-none d-md-inline">Profile</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a routerLink="/sidebar/{{userId}}/add-user" class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                        <a routerLink="/sidebar/{{userId}}/add-user/{{userId}}" class="nav-link align-middle px-0 text-light d-flex align-items-center">
                             <i class="bi bi-people-fill"style="font-size: 2rem;"></i>
                             <span class="ms-1 d-none d-md-inline">Add User</span>
                         </a>
@@ -40,13 +40,13 @@
                         </a>
                     </li>
                     <li class="nav-item" >
-                        <a routerLink="/sidebar/self-appraisal" class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                        <a routerLink="/sidebar/{{userId}}/self-appraisal/{{userId}}" class="nav-link align-middle px-0 text-light d-flex align-items-center">
                             <i class="bi bi-pencil-square" style="font-size: 2rem;"></i>
                             <span class="ms-1 d-none d-md-inline">Appraisal</span>
                         </a>
                     </li>
                     <li class="nav-item" >
-                        <a routerLink="/sidebar/appraisal-form/2" class="nav-link align-middle px-0 text-light d-flex align-items-center">
+                        <a routerLink="/sidebar/appraisal-form" class="nav-link align-middle px-0 text-light d-flex align-items-center">
                             <i class="bi bi-plus-lg " style="font-size: 2rem;" ></i>
                             <span class="ms-1 d-none d-md-inline">Appraisal Questions</span>
                         </a>

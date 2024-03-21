@@ -41,18 +41,18 @@ const routes: Routes = [
         component:AppraisalFormComponent
       },
       {
-      path: 'profile',
+      path: 'profile/:Id',
       component: ProfileComponent
       },
       {
-      path: "add-user",
+      path: "add-user/:Id",
       component: AddUserComponent
       },
       {
-      path: "dashboard",
+      path: "dashboard/:Id",
       component: DashboardComponent
       },{
-        path:'self-appraisal',
+        path:'self-appraisal/:Id',
         component:SelfAppraisalComponent
       }
     ]

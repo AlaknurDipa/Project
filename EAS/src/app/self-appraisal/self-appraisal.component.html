@@ -18,15 +18,19 @@
                       <th>End Date</th>
                       <th>Task List</th>
                       <th>Self Rating</th>
-                      <th>Appraiser Rating</th> 
+                      <th *ngIf="role==='Manager'">Appraiser Rating</th> 
                     </tr>
                   </thead>
                   <tbody>
-                   
-                        
-                    
-                   
-                    
+                    <tr *ngFor="let project of Projects">
+                     <td>{{project.projectName}}</td>
+                     <td>{{project.startDate.substring(0,10)}}</td>
+                     <td>{{project.endDate.substring(0,10)}}</td>
+                     <td>{{project.task}}</td>
+                     <td > <ngb-rating id="rate" [max]="5"  [rate]="project.selfRating"  class=" text-warning fw-5 " style="font-size: 30px;"></ngb-rating></td>
+                     <td *ngIf="role==='Manager'"><ngb-rating id="rate" [max]="5"  [rate]="project.appraisarRating"  class=" text-warning fw-5 " style="font-size: 30px;"></ngb-rating></td>
+                    </tr>
+                  
                   </tbody>
                   
               </table>
@@ -43,82 +47,67 @@
 
   <!-- Modal -->
   <div class="modal  fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl" >
+    <div class="modal-dialog modal-dialog-centered modal-xl" style="z-index: 1050;" >
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">Add Project</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body ">
-            <form>
-                <div class="row">
+            <form class="form">
+                <div class="row ">
                   <div class="col">
-                    <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Project</mat-label>
-                        <input matInput>
-                      </mat-form-field>
-                    <!-- <label for="project" class="form-label">Project Name</label>
-                    <input type="text" id="project" class="form-control"  name="project"> -->
+                    
+                      <input type="text" placeholder="Project" class="form-control p-3" name="project" [(ngModel)]="project" required>
+                   
                   </div>
                   
                 </div>
-                <div class="row mt-3">
+                <div class="row mt-3 mb-3">
                     <div class="col ">
-                        <mat-form-field appearance="outline" class="w-100">
-                            <mat-label>Choose start date</mat-label>
-                            <input matInput [matDatepicker]="sDate" placeholder="MM/DD/YYYY">
-                            
-                            <mat-datepicker-toggle matIconSuffix [for]="sDate"></mat-datepicker-toggle>
-                            <mat-datepicker #sDate></mat-datepicker>
-                        </mat-form-field>
+                      
+                      <input type="date" class="form-control p-3 " placeholder="" name="start_date" [(ngModel)]="start_date" required>
                         
                     </div>
                     <div class="col ">
-                        <mat-form-field appearance="outline" class="w-100">
-                            <mat-label>Choose end date</mat-label>
-                            <input matInput [matDatepicker]="eDate" placeholder="MM/DD/YYYY">
-                            <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
-                            <mat-datepicker-toggle matIconSuffix [for]="eDate"></mat-datepicker-toggle>
-                            <mat-datepicker #eDate></mat-datepicker>
-                        </mat-form-field>
+                      <input type="date" class="form-control p-3" name="end_date" [(ngModel)]="end_date">
+                       
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3">
 
                     <div class="col">
-                        <mat-form-field appearance="outline" class="w-100">
-                            <mat-label>Task List</mat-label>
-                            <textarea matInput></textarea>
-                          </mat-form-field>
+                        
+                          <input type="textarea" placeholder="Task List" class="form-control p-3" name="task_lis" [(ngModel)]="task_list" required>
                     </div>
 
                 </div>
                 <div class="row mt-3">
                         <div class="col">
-                        
                             <label for="rate" class="form-label me-5">Self Rating</label>
                        </div> 
                        
                         <div class="col">
-                            <ngb-rating id="rate" [max]="5" (rate)="1"  class=" text-warning fw-5 " style="font-size: 30px;"></ngb-rating>
+                            <ngb-rating id="rate1" [max]="5" [(rate)]="self_rating"  class=" text-warning fw-5 " style="font-size: 30px;"></ngb-rating>
                         </div>
                     
                 </div>  
-                <div class="row mt-3">
+                <div class="row mt-3 ">
                     <div class="col">
-                        <label for="rate" class="form-label ">Appraiser Rating</label>
+                        <label for="rate" class="form-label">Appraiser Rating</label>
                        
                     </div>
                     <div class="col">
-                        <ngb-rating id="rate" [max]="5" (rate)="1"  class=" text-warning fw-5 " style="font-size: 30px;"></ngb-rating>
+                        <ngb-rating id="rate" [max]="5" [(rate)]="appraiser_rating"  class=" text-warning fw-5 " style="font-size: 30px;" ></ngb-rating>
                     </div>
-                </div>  
+                </div>
+                 <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary" (click)="SaveProject()" data-bs-dismiss="modal">Save</button>
+                </div> 
               </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save</button>
-        </div>
+        
       </div>
     </div>
   </div>
