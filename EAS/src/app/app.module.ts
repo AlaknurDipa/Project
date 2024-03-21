@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { NgForm } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +14,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppraisalFormComponent } from './appraisal-form/appraisal-form.component';
 import { UserhelpComponent } from './userhelp/userhelp.component';
+
+import { EmployeeAprraisalsComponent } from './employee-aprraisals/employee-aprraisals.component';
+import { ReviewAppraisalComponent } from './review-appraisal/review-appraisal.component';
+
+import {MatSelectModule} from '@angular/material/select';
+import { FormControl } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,8 +30,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatNativeDateModule } from '@angular/material/core';
-
 import { MatInputModule } from '@angular/material/input';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -39,14 +46,18 @@ import { MatInputModule } from '@angular/material/input';
     DashboardComponent,
     AppraisalFormComponent,
     UserhelpComponent,
+    EmployeeAprraisalsComponent,
+    ReviewAppraisalComponent,
     SelfAppraisalComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    NgbModule,
     HttpClientModule,
+    MatInputModule,
+    FormsModule,
     BrowserAnimationsModule,
     // ToastrModule.forRoot(),
     MatTabsModule,
@@ -55,6 +66,10 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
+    
+    MatSelectModule,
+    MatFormFieldModule,
+    MatAutocompleteModule
     
     
   ],

@@ -1,23 +1,16 @@
 
 <div class="container">
-      <div class="row container-fluid">
-        <div class="fw-bold fs-1 mt-5 col-1 ">Users</div>
-        <div class=" col-11 text-end mt-5 form-group">
-            <button class="btn rounded-4 " style="background-color: rgb(30,58,138);">
-                <a class="text-white fw-bold p-3  " style="text-decoration: none;"  role="button" routerLink="/sidebar/add-user">Add a new user</a></button>
+      <div class="row container-fluid mt-5">
+        <div class="fw-bold fs-1  col-1 ">Users</div>
+        <div class=" col-11 text-end mt-2 form-group">
+            <button class="btn rounded-4 text-light fw-bold px-4" style="background-color: rgb(30,58,138);"routerLink="/sidebar/add-user">Add a new user</button>
         </div> 
       </div>
-        
-      <!-- <div class="row container mt-4">
-          <div class="col-3">
-              <input type="text" class="form-control rounded border-primary" placeholder="Search by username">
-          </div>
-      </div> -->
 
 
       <div class="shadow  mt-5 me-lg-1 me-xs-0">
 
-        <table class="table fs-5">
+        <table class="table fs-5 table-hover">
             <thead>
               <tr class="text-center ">
                 <th>Name</th>
@@ -26,20 +19,12 @@
               </tr>
             </thead>
             <tbody >
-                <tr class="text-center">
-                  <td >Hello</td>
-                  <td >hiii</td>
-                  <td><button class="btn bg-success text-light me-2 px-2" ><a routerLink="/sidebar/add-user"><i class="bi bi-pencil-square text-light" ></i></a></button>
+                <tr class="text-center" *ngFor="let user of users">
+                  <td >{{user.first_name}} {{user.last_name}}</td>
+                  <td >{{user.user_name}}</td>
+                  <td><button class="btn bg-success text-light me-2 px-2" ><a routerLink="/sidebar/edit-user/"+{{user.user_id}}><i class="bi bi-pencil-square text-light" ></i></a></button>
                     <button class="btn text-light bg-danger px-2"><i class="bi bi-trash-fill"></i></button>
                 </tr>
-
-                <tr class="text-center">
-                  <td >Hello</td>
-                  <td >hiii</td>
-                  <td><button class="btn bg-success text-light me-2 px-2" ><a routerLink="/sidebar/add-user"><i class="bi bi-pencil-square text-light" ></i></a></button>
-                    <button class="btn text-light bg-danger px-2"><i class="bi bi-trash-fill"></i></button>
-                </tr>
-            
             </tbody>
           </table>
       </div>

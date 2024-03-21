@@ -14,10 +14,6 @@
     left: calc(50% - 50px); /* Centers the circle horizontally */
   }
 
-
-hr{
-    height:10px;
-    width: 150px;
-    border: none;
-    background-color: navy;
+.card:hover{
+  transform: scale(1.07);
 }

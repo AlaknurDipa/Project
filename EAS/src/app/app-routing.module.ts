@@ -10,6 +10,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppraisalFormComponent } from './appraisal-form/appraisal-form.component';
 import { UsersComponent } from './users/users.component';
 import { UserhelpComponent } from './userhelp/userhelp.component';
+import { EmployeeAprraisalsComponent } from './employee-aprraisals/employee-aprraisals.component';
+import { ReviewAppraisalComponent } from './review-appraisal/review-appraisal.component';
 import { SelfAppraisalComponent } from './self-appraisal/self-appraisal.component';
 
 const routes: Routes = [
@@ -49,12 +51,41 @@ const routes: Routes = [
       component: AddUserComponent
       },
       {
+      path: "edit-user/:id",
+      component: AddUserComponent
+      }
+      
+      ,
+      {
+      path: "edit-user/:id",
+      component: AddUserComponent
+      }
+      
+      ,
+      {
       path: "dashboard/:Id",
       component: DashboardComponent
       },{
         path:'self-appraisal/:Id',
         component:SelfAppraisalComponent
+      },
+      {
+      path: 'users',
+      component: UsersComponent
+      },
+      {
+      path: 'userhelp',
+      component: UserhelpComponent
+      },
+      {
+        path:'employee-appraisals',
+        component:EmployeeAprraisalsComponent
+      },
+      {
+        path:'employee-appraisals/1',
+        component:ReviewAppraisalComponent
       }
+
     ]
   }
 ];

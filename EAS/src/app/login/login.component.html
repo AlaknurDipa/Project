@@ -30,7 +30,17 @@
                                 <input type="text" class="form-control" id="username" placeholder="Username" name="username" ngModel required>
                             </div>
                         </div>
-                        <div class="col-12 px-0 mt-3">
+
+                          <div class="col-12 px-0 mt-3">
+                            <label for="inlineFormInputGroup">Password</label>
+                            <div class="input-group mb-2 mt-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                </div>
+                                <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="Password">
+                            </div>
+                            </div>
+                          <!-- <div class="col-12 px-0 mt-3">
                             <label for="password">Password</label>
                             <div class="input-group mb-2 mt-3">
                                 <div class="input-group-prepend">
@@ -40,10 +50,10 @@
                                 </div>
                                 <input type="password" class="form-control" id="password" placeholder="Password" name="password" ngModel required>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="row mt-5">
                             <div class="col-12 text-center">
-                                <button type="submit"  class="btn w-50 text-light fw-bold rounded-4">Sign In</button>
+                                <button type="submit"  class="btn w-50 text-light fw-bold rounded-4" routerLink="/sidebar/dashboard">Sign In</button>
                             </div>
                         </div>
                         <div class="row mt-3">
