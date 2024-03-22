@@ -36,7 +36,7 @@ const routes: Routes = [
     component: SidebarComponent,
     children: [
       {
-        path: "",
+        path: "dashboard/:Id",
         component: DashboardComponent
       },{
         path:"appraisal-form/:Id",
