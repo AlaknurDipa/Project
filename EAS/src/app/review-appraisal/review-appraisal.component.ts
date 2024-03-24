@@ -17,6 +17,9 @@ export class ReviewAppraisalComponent {
 
 
   @ViewChild('thankyouBox') thankyouBox: any;
+
+    btn1="Save";
+    btn2="Save";
     self_rating:number=0
     appraiser_rating:number=0
     project:any;
@@ -68,11 +71,7 @@ export class ReviewAppraisalComponent {
       // secondCtrl: ['', Validators.required],
       // s_comment1:['',Validators.required]
     });
-    ngOnChanges(): void {
-      // Handle your refresh logic here
-      console.log('Component changed, refreshing...');
-      window.location.reload();
-    }
+    
   
    
     ngOnInit(){
@@ -217,6 +216,8 @@ export class ReviewAppraisalComponent {
         }
         
       ]
+
+      this.btn1="Saved"
       
     }
  
@@ -263,6 +264,7 @@ export class ReviewAppraisalComponent {
           }
           
       ]
+      this.btn2="Saved"
       // this.http.post("http://localhost:8080/user/ratings/addrating",this.ratingData1).subscribe(result=>
       // {
       //   console.log(result);
@@ -301,7 +303,7 @@ export class ReviewAppraisalComponent {
                     
                     this.greet="Thank you!"
                     this.msg="Your details has been successfully submitted"
-                    this.ngOnChanges()
+                    
                      
                   })
                 }else{

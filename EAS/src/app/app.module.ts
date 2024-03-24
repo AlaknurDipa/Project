@@ -44,10 +44,8 @@ import {MatCardModule} from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ToastrModule } from 'ngx-toastr';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatIconModule} from '@angular/material/icon';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import { MatButtonModule } from '@angular/material/button';import { AppraisaldataComponent } from './appraisaldata/appraisaldata.component';
+
+import { AppraisaldataComponent } from './appraisaldata/appraisaldata.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
@@ -84,14 +82,31 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    MatIconModule,MatTableModule,
+    MatTableModule,
     MatSelectModule,
     MatFormFieldModule,
     MatAutocompleteModule,
+    MatCardModule,
     MatStepperModule,
-    ReactiveFormsModule,
+    MatIconModule,
+    MatProgressBarModule,
     MatButtonModule,
-    MatProgressBarModule
+    MatDialogModule,
+    ReactiveFormsModule ,
+    MatSliderModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    NgCircleProgressModule.forRoot({
+     
+      radius: 100,
+      outerStrokeWidth: 16,
+      
+      outerStrokeColor: "rgb(30,58,138)",
+      innerStrokeColor :"rgb(30,58,138)",
+      animationDuration: 300,
+      
+    })
+
     
     
     
