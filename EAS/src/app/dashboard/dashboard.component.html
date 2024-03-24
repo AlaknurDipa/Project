@@ -1,57 +1,90 @@
-<div class="container">
+<div class="container-fluid px-5 mt-5">
+    <div class="h1">Welcome {{users.first_name}} </div>
+
     <div class="row  d-flex p-2 shadow rounded mt-5 py-3 align-space-between">
         <div class="col-lg-5 col-md-12 p-2 ps-4 d-flex align-items-center ">
             <div class="col-2 ">
                 <img src="../../assets/profile-user (1).png" height="70px" width="70px">
             </div>
            <div class="col-12 ps-3">
-                <p class="fs-5">Dipa Krushna Alaknur</p>
-                <p class="fs-5">Intern</p>
+                <p class="fs-5">{{users.first_name}} {{users.last_name}}</p>
+                <p class="fs-5">{{users.role}}</p>
            </div>
         </div>
         <div class="col-lg-5 col-md-12 p-2 d-flex  align-items-center">
             <div>
-                <p class="fs-5">ID :<span>101</span></p>
-            <p class="fs-5">Manager : <span>Vikas Jain</span></p>
+                <p class="fs-5">ID :<span>{{users.user_id}}</span></p>
+            <p class="fs-5">Manager : <span>{{users.manager_name}}</span></p>
             </div>
          
         </div>
         <div class="col-lg-2  col-md-12 p-2 d-flex  align-items-center">
             <div>
                 <p class="fs-5"><i class="bi bi-geo-alt-fill color" style="font-size:23px;"></i>Work Location</p>
-                <p class="fs-5 ms-2">Pune </p>
+                <p class="fs-5 ms-2">{{users.location}}</p>
             </div>
            
                 
            
         </div>
+
+
+
+        
  
     </div>
 
+   
+      <div class="container-fluid" *ngIf="user_id!==31">
+        
 
-    <div class="rounded-3 d-flex justify-content-center mt-5 shadow-lg" style="background-color: rgb(228, 228, 236);">
-        <ngb-carousel >
-            <ng-template ngbSlide>
-                <!-- <div class="picsum-img-wrapper  ">
-                    <img src="" alt="Angular Carousel 1" >
-                  </div> -->
-              <div >
-                <h3>Title Goes Here</h3>
-                
-              </div>
-            </ng-template>
-            <ng-template ngbSlide>
-              <!-- <div class="picsum-img-wrapper">
-                <img src="" alt="Angular Carousel 2">
-              </div> -->
-              <div>
-                <h3>Title Goes Here</h3>
-              </div>
-            </ng-template>
-          </ngb-carousel>
-    </div>
+        <div class="fs-2 fw-bold mt-5">Your Progress</div>
+        <div class="d-flex align-items-center mt-4 mb-5 ">
+          <h4 class="me-3">Appraisal Status</h4>
+          <progress  [value]="value" max="100"  style="width: 200px; height: 20px;"></progress>
+          <span class="progress-value">{{ value }}%</span>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col mb-3  text-center">
+            <circle-progress 
+              [percent]="project_rating"
+              [radius]="80"
+              [outerStrokeWidth]="16"
+              [outerStrokeColor]="'rgb(30,58,138)'"
+              [innerStrokeColor]="'rgb(30,58,138)'"
+              [animation]="true"
+              [animationDuration]="300"></circle-progress>
+              <div class="fw-bold fs-5" >Projects</div>
+          </div>
+          <div class="col mb-3 text-center">
+            <circle-progress 
+              [percent]="c_rating"
+              [radius]="80"
+              [outerStrokeWidth]="16"
+              [outerStrokeColor]="'rgb(30,58,138)'"
+              [innerStrokeColor]="'rgb(30,58,138)'"
+              [animation]="true"
+              [animationDuration]="300"></circle-progress>
+               <div class="fw-bold fs-5" >Competency</div>
+          </div>
+          <div class="col mb-3 text-center">
+            <circle-progress 
+              [percent]="v_rating"
+              [radius]="80"
+              [outerStrokeColor]="'rgb(30,58,138)'"
+              [innerStrokeColor]="'rgb(30,58,138)'"
+              [animation]="true"
+              [animationDuration]="300"></circle-progress>
+             <div class="fw-bold fs-5">Value Alignment</div>
+          </div>
+        </div>
+      </div>
+      
+
+
     
- 
- 
+
     
-</div>  
+</div> 
+
+

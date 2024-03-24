@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { NgForm } from '@angular/forms';
-
+import {MatSliderModule} from '@angular/material/slider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
@@ -19,15 +19,19 @@ import { EmployeeAprraisalsComponent } from './employee-aprraisals/employee-aprr
 import { ReviewAppraisalComponent } from './review-appraisal/review-appraisal.component';
 
 import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FormControl } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import {ProgressSpinnerMode, MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
-
-
-import {MatInputModule} from '@angular/material/input';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { ToastrModule } from 'ngx-toastr';
@@ -36,9 +40,11 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatNativeDateModule } from '@angular/material/core';
-
+import {MatCardModule} from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { AppraisaldataComponent } from './appraisaldata/appraisaldata.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -55,7 +61,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     UserhelpComponent,
     EmployeeAprraisalsComponent,
     ReviewAppraisalComponent,
-    SelfAppraisalComponent
+    SelfAppraisalComponent,
+    AppraisaldataComponent
   ],
 
   imports: [
@@ -73,12 +80,30 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    
+    MatTableModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatAutocompleteModule
-    
-    
+    MatAutocompleteModule,
+    MatCardModule,
+    MatStepperModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatButtonModule,
+    MatDialogModule,
+    ReactiveFormsModule ,
+    MatSliderModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    NgCircleProgressModule.forRoot({
+     
+      radius: 100,
+      outerStrokeWidth: 16,
+      
+      outerStrokeColor: "rgb(30,58,138)",
+      innerStrokeColor :"rgb(30,58,138)",
+      animationDuration: 300,
+      
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

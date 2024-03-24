@@ -1,0 +1,281 @@
+<div class="container-fluid px-5 " >
+    <h1 class="fs-1 fw-bold mt-5 ms-3">Appraisal</h1>
+    
+    <div class="d-flex align-items-center mt-4 mb-5 ms-3">
+      <h4 class="me-3">Appraisal Status</h4>
+      <progress [value]="value" max="100" style="width: 200px; height: 20px;"></progress>
+      <span>{{value}}%</span>
+    </div>
+    
+
+    <mat-stepper  #stepper class="mt-4">
+      <mat-step [stepControl]="firstFormGroup" label="Projects">
+        <form  [formGroup]="firstFormGroup">
+          <ng-template matStepperIcon="edit">
+            <mat-icon>bubble_chart</mat-icon>
+          </ng-template>
+          
+          
+        
+        <table class="table mt-5">
+            
+            <thead>
+                <tr class="" style="font-size: 17px;">
+                  <th>Project</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Task List</th>
+                  <th>Self Rating</th>
+                  <th >Appraiser Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let project of Projects">
+                 <td>{{project.projectName}}</td>
+                 <td>{{project.startDate.substring(0,10)}}</td>
+                 <td>{{project.endDate.substring(0,10)}}</td>
+                 <td>{{project.task}}</td>
+                 <td > <ngb-rating id="rate" [max]="5"  [rate]="project.selfRating"  class=" text-warning fw-5 " style="font-size: 30px;" [readonly]="true"></ngb-rating></td>
+                 <td ><ngb-rating id="rate" [max]="5"  [rate]="project.appraisarRating"  class=" text-warning fw-5 " style="font-size: 30px;"  [readonly]="true"></ngb-rating></td>
+                </tr>
+              
+              </tbody>
+              
+          </table>
+          <div class="mt-5">
+            <button mat-button matStepperNext class="border">Next</button>
+          </div>
+        </form>
+        
+      
+      </mat-step>
+      
+      <mat-step  [stepControl]="secondFormGroup" label="Competency" #stepper>
+        <form [formGroup]="secondFormGroup">
+          <form #competencyRating="ngForm" >
+            <table class="table table-hover  text-center mt-5">
+              <thead>
+                <tr>
+                  <th >Sr.No</th>
+                  <th >Category</th>
+                  <th >Self Rating</th>
+                  <th >Self Comment</th>
+                  <th >Appraiser Rating</th>
+                  <th>Appraiser Comment</th>
+                </tr>
+              </thead>
+              <tbody >
+                <tr>
+                  <td >1</td>
+                  <td >Communication</td>
+                  <td   style=" font-size: xx-large; ">
+                      <ngb-rating [max]="5" [rate]="Ratings[4].self_rating" class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                  </td>
+                  
+                  <td >
+                    {{Ratings[4].self_comment}}
+                  </td>
+                  <td  style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" [rate]="Ratings[4].appraiser_rating"  class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                    
+                  </td>
+                  <td >
+                    {{Ratings[4].appraiser_comment}}
+                  </td>
+                  
+                </tr>
+                <tr>
+                  <td >2</td>
+                  <td >People Management</td>
+                  <td   style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" [rate]="Ratings[5].self_rating" class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                </td>
+                
+                <td >
+                  {{Ratings[5].self_comment}}
+                </td>
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" [rate]="Ratings[5].appraiser_rating"  class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                  
+                </td>
+                <td >
+                  {{Ratings[5].appraiser_comment}}
+                </td>
+
+
+                </tr>
+  
+  
+                <tr>
+                  <td >3</td>
+                  <td >Client Relationship Management</td>
+                  <td   style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" [rate]="Ratings[6].self_rating" class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                </td>
+                
+                <td >
+                  {{Ratings[6].self_comment}}
+                </td>
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" [rate]="Ratings[6].appraiser_rating"  class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                  
+                </td>
+                <td >
+                  {{Ratings[6].appraiser_comment}}
+                </td>
+                </tr>
+  
+  
+                <tr>
+                  <td >4</td>
+                  <td >Job Knowledge</td>
+                  <td   style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" [rate]="Ratings[7].self_rating" class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                </td>
+                
+                <td >
+                  {{Ratings[7].self_comment}}
+                </td>
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" [rate]="Ratings[7].appraiser_rating"  class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                  
+                </td>
+                <td >
+                  {{Ratings[7].appraiser_comment}}
+                </td>
+                </tr>
+               
+              </tbody>
+            </table>
+            <div class="mt-5" style="display: grid; grid-template-columns: auto auto 1fr;">
+              <button mat-button matStepperPrevious class="border">Back</button>
+              <button mat-button matStepperNext class="border ms-3">Next</button>
+             
+            </div>
+           
+  
+    </form>
+          
+         
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup" label="Value Alignment">
+        <form  [formGroup]="secondFormGroup">
+          
+           <form #ValueAlignemnt="ngForm" >
+            <table class="table table-hover text-center mt-5">
+              <thead>
+                <tr >
+                  <th >Sr.No</th>
+                  <th >Category</th>
+                  <th >Employee Rating</th>
+                  <th >Employee Comment</th>
+                  <th >Appraiser Rating</th>
+                  <th >Appraiser Comment</th>
+                 
+                </tr>
+              </thead>
+              <tbody >
+                
+                <tr>
+                  <td >1</td>
+                  <td name="title">Trust</td>
+                  <td   style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" [rate]="Ratings[0].self_rating" class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                </td>
+                
+                <td >
+                  {{Ratings[0].self_comment}}
+                </td>
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" [rate]="Ratings[0].appraiser_rating"  class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                  
+                </td>
+                <td >
+                  {{Ratings[0].appraiser_comment}}
+                </td>
+
+                </tr>
+                <tr>
+                  <td >2</td>
+                  <td >Entrepreneurship</td>
+                  <td   style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" [rate]="Ratings[1].self_rating" class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                </td>
+                
+                <td >
+                  {{Ratings[1].self_comment}}
+                </td>
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" [rate]="Ratings[1].appraiser_rating"  class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                  
+                </td>
+                <td >
+                  {{Ratings[1].appraiser_comment}}
+                </td>
+
+                </tr>
+  
+  
+                <tr>
+                  <td >3</td>
+                  <td >Attention To Detail</td>
+                  <td   style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" [rate]="Ratings[2].self_rating" class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                </td>
+                
+                <td >
+                  {{Ratings[2].self_comment}}
+                </td>
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" [rate]="Ratings[2].appraiser_rating"  class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                  
+                </td>
+                <td >
+                  {{Ratings[2].appraiser_comment}}
+                </td>
+
+                </tr>
+  
+  
+                <tr>
+                  <td >4</td>
+                  <td >Mateship</td>
+                  <td   style=" font-size: xx-large; ">
+                    <ngb-rating [max]="5" [rate]="Ratings[3].self_rating" class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                </td>
+                
+                <td >
+                  {{Ratings[3].self_comment}}
+                </td>
+                <td  style=" font-size: xx-large; ">
+                  <ngb-rating [max]="5" [rate]="Ratings[3].appraiser_rating"  class=" text-warning fw-5 " [readonly]="true"></ngb-rating>
+                  
+                </td>
+                <td >
+                  {{Ratings[3].appraiser_comment}}
+                </td>
+
+                </tr>
+               
+              </tbody>
+            </table>
+            <div class="mt-5" style="display: grid; grid-template-columns: auto auto 1fr;">
+              <button mat-button matStepperPrevious class="border">Back</button>
+              
+              <!-- <button mat-button class="btn-bg text-white" style="justify-self: end;">Save</button> -->
+            </div>
+          </form>
+          
+       </form>
+      </mat-step>
+
+      
+    </mat-stepper>
+  
+    
+  </div>
+  
+
+
+  

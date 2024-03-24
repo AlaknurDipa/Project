@@ -13,6 +13,10 @@ import { UserhelpComponent } from './userhelp/userhelp.component';
 import { EmployeeAprraisalsComponent } from './employee-aprraisals/employee-aprraisals.component';
 import { ReviewAppraisalComponent } from './review-appraisal/review-appraisal.component';
 import { SelfAppraisalComponent } from './self-appraisal/self-appraisal.component';
+import { AppraisaldataComponent } from './appraisaldata/appraisaldata.component';
+
+
+
 
 const routes: Routes = [
   {
@@ -36,49 +40,54 @@ const routes: Routes = [
     component: SidebarComponent,
     children: [
       {
-        path: "/:id",
+        path: "",
         component: DashboardComponent
-      },{
-        path:"appraisal-form/:Id",
+      },
+      {
+          path:'appraisaldata/:id',
+          component:AppraisaldataComponent
+      },
+      {
+        path:"appraisal-form/:id",
         component:AppraisalFormComponent
       },
       {
-      path: 'profile',
+      path: 'profile/:id',
       component: ProfileComponent
       },
       {
-      path: "add-user",
+      path: "users/:id/:type",
       component: AddUserComponent
       },
       {
-      path: "edit-user/:id",
+      path: "users/:id/:type/:id",
       component: AddUserComponent
       }
       
       ,
       {
-      path: "dashboard",
+      path: "dashboard/:id",
       component: DashboardComponent
       },{
-        path:'self-appraisal',
+        path:'self-appraisal/:id',
         component:SelfAppraisalComponent
       },
       {
-      path: 'users',
+      path: 'users/:id',
       component: UsersComponent
       },
       {
-      path: 'userhelp',
+      path: 'userhelp/:id',
       component: UserhelpComponent
       },
       {
-        path:'employee-appraisals',
+        path:'employee-appraisals/:id',
         component:EmployeeAprraisalsComponent
       },
       {
-        path:'employee-appraisals/1',
+        path:'review-appraisal/managerId=/:id/:emp_id',
         component:ReviewAppraisalComponent
-      }
+      },
 
     ]
   }

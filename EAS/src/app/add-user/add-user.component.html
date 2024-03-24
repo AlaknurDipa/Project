@@ -1,85 +1,86 @@
+<div class="container">
+  <!-- <div class="row vh-100"> -->
 
-    <div class="container">
-        <!-- <div class="row vh-100"> -->
-            
-            <div class=" vh-100 p-5">
-                <div class="fs-1 fw-bold pb-5">New User</div>
+  <div class=" vh-100 p-5">
+    <div class="fs-1 fw-bold pb-5" id="title">{{pageTitle}}</div>
 
-                <div class="p-5 shadow-lg rounded-5">
-                    <form>
-                      <div class="row pt-lg-4 pt-sm-4">
-                        <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                          <mat-label class="fs-5">Username</mat-label>
-                          <input matInput>
-                        </mat-form-field>
+    <div class="p-5 shadow-lg rounded-5">
+      <form>
+        <div class="row pt-lg-4 pt-sm-4">
+          <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
+            <mat-label class="fs-5">Username</mat-label>
+            <input matInput [(ngModel)]="user_name" name="user_name" required>
+          </mat-form-field>
 
-                        <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                          <mat-label class="fs-5">Password</mat-label>
-                          <input matInput>
-                        </mat-form-field>
-                     </div>
-
+          <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
+            <mat-label class="fs-5">Password</mat-label>
+            <input matInput [(ngModel)]="password" name="password" required>
+          </mat-form-field>
+        </div>
 
 
-                     <div class="row pt-lg-4 pt-sm-4">
-                      <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                        <mat-label class="fs-5">First Name</mat-label>
-                        <input matInput>
-                      </mat-form-field>
 
-                      <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                        <mat-label class="fs-5">Last Name</mat-label>
-                        <input matInput>
-                      </mat-form-field>
-                   </div>
+        <div class="row pt-lg-4 pt-sm-4">
+          <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
+            <mat-label class="fs-5">First Name</mat-label>
+            <input matInput [(ngModel)]="first_name" name="first_name" required>
+          </mat-form-field>
 
-                   <div class="row pt-lg-4 pt-sm-4">
-                    <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                      <mat-label class="fs-5">Designation</mat-label>
-                      <input matInput>
-                    </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
+            <mat-label class="fs-5">Last Name</mat-label>
+            <input matInput [(ngModel)]="last_name" name="last_name" required>
+          </mat-form-field>
+        </div>
 
-                    <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                      <mat-label class="fs-5">Role</mat-label>
-                      <input matInput>
-                    </mat-form-field>
-                 </div>
+        <div class="row pt-lg-4 pt-sm-4">
+          <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
+            <mat-label class="fs-5">Designation</mat-label>
+            <input matInput [(ngModel)]="designation" name="designation" required>
+          </mat-form-field>
 
-
-                 <div class="row pt-lg-4 pt-sm-4">
-                  <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                    <mat-label class="fs-5">Email</mat-label>
-                    <input matInput>
-                  </mat-form-field>
-
-                  <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                    <mat-label class="fs-5">Contact Number</mat-label>
-                    <input matInput>
-                  </mat-form-field>
-               </div>
+          <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
+            <mat-label class="fs-5">Role</mat-label>
+            <input matInput [(ngModel)]="role" name="role" required>
+          </mat-form-field>
+        </div>
 
 
-               <div class="row pt-lg-4 pt-sm-4">
-                  <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                    <mat-label class="fs-5">Department</mat-label>
-                    <mat-select>
-                    <mat-option *ngFor="let dept of departments">{{dept.dept_name}}</mat-option>
-                  </mat-select>
-                </mat-form-field>
+        <div class="row pt-lg-4 pt-sm-4">
+          <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
+            <mat-label class="fs-5">Email</mat-label>
+            <input matInput [(ngModel)]="email" name="email" required>
+          </mat-form-field>
 
-                <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
-                  <mat-label class="fs-5">Manager name</mat-label>
-                  <input matInput>
-                </mat-form-field>
-             </div>
+          <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
+            <mat-label class="fs-5">Contact Number</mat-label>
+            <input matInput [(ngModel)]="contact_number" name="contact_number" required>
+          </mat-form-field>
+        </div>
 
-                        <button type="submit" class="btn px-3 mt-4 fw-bold text-light">Create User</button>
-                      </form>
-                </div>
-                
-    
-            </div>
-        <!-- </div> -->
-       
-    </div>  
 
+        <div class="row pt-lg-4 pt-sm-4">
+          <mat-form-field appearance="outline" class="example-full-width col-md-6">
+            <mat-label class="fs-5">Department</mat-label>
+            <input matInput [matAutocomplete]="searchoutcomes" [(ngModel)]="department" name="searchOutcome" ngModel
+              required>
+            <mat-autocomplete #searchoutcomes>
+              <mat-option *ngFor="let department of departments" value="{{department.dept_name}}">{{department.dept_name}}</mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+
+
+          <mat-form-field class="example-full-width" appearance="outline" class="col-md-6">
+            <mat-label class="fs-5">Manager name</mat-label>
+            <input matInput [(ngModel)]="manager_name" name="manager_name" required>
+          </mat-form-field>
+        </div>
+
+        <button type="submit" class="btn px-3 mt-4 fw-bold text-light" (click)="adduser()">{{btn_title}}</button>
+      </form>
+    </div>
+
+
+  </div>
+  <!-- </div> -->
+
+</div>

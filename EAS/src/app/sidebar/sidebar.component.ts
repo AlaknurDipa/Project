@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,11 +9,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SidebarComponent {
   userId:number=0;
-  constructor(private activeRoute:ActivatedRoute){
+  role:string=''
+  constructor(private activeRoute:ActivatedRoute,private http:HttpClient){
 
   }
   ngOnInit(){
     this.userId = JSON.parse( this.activeRoute.snapshot.params['Id'])
+
+    this.http.get("http://localhost:8080/api/v1/users/getById/"+this.userId).subscribe((response:any)=>{
+      this.role=response.role
+    })
     
   }
 
