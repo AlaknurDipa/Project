@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { R3SelectorScopeMode } from '@angular/compiler';
 
 
+
 @Component({
   selector: 'app-add-user',
   templateUrl: './add-user.component.html',
@@ -125,5 +126,5 @@ export class AddUserComponent {
         this.router.navigateByUrl('/sidebar/1/users/1')
         
   }
-
+  
 }

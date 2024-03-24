@@ -1,4 +1,15 @@
-
+.bg-color{
+  background-color: rgb(30, 53, 138);
+}
 .color{
   color: rgb(30, 53, 138);
 };
+
+.border{
+  border: 2px solid rgb(10, 10, 10);
+  
+}
+.no-border{
+  border: none;
+}
+

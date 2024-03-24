@@ -66,7 +66,7 @@ const routes: Routes = [
       
       ,
       {
-      path: "dashboard/:id",
+      path: "dashboard",
       component: DashboardComponent
       },{
         path:'self-appraisal/:id',

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-// import { ToastrService } from 'ngx-toastr';
-import { delay, timeout, Observable } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-login',
@@ -34,6 +34,7 @@ export class LoginComponent {
         // this.toastr.success('Successful', 'Login',{ timeOut: 1000 });
         console.log(response)
         this.router.navigate(['/sidebar/'+response.user_id]);
+        
        }else {
         this.data=response
         console.log("Working");
